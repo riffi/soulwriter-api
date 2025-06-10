@@ -26,6 +26,7 @@ public class BookService {
     book.setBookTitle(request.getBookTitle()); // Учтено название
     book.setUser(user);
     book.setBookData(request.getBookData());
+    book.setKind(request.getKind());
     book.setCreatedAt(java.time.LocalDateTime.now());
     book.setUpdatedAt(java.time.LocalDateTime.now());
 

@@ -8,4 +8,5 @@ import lombok.Data;
 public class BookShortInfo {
   private String uuid;
   private String bookTitle;
+  private String kind;
 }

@@ -12,6 +12,6 @@ public interface UserBookRepository extends JpaRepository<UserBook, String> {
   Optional<UserBook> findByUuidAndUser_Id(String uuid, Long userId);
 
   // Новый метод для получения списка книг
-  @Query("SELECT NEW ru.inklumin.inkluminapi.dto.BookShortInfo(b.uuid, b.bookTitle) FROM UserBook b WHERE b.user.id = :userId")
+  @Query("SELECT NEW ru.inklumin.inkluminapi.dto.BookShortInfo(b.uuid, b.bookTitle, b.kind) FROM UserBook b WHERE b.user.id = :userId")
   List<BookShortInfo> findShortInfoByUserId(@Param("userId") Long userId);
 }

@@ -23,6 +23,9 @@ public class UserBook {
   @Column(nullable = false, columnDefinition = "TEXT")
   private String bookData;
 
+  @Column(name = "kind")
+  private String kind;
+
   @CreationTimestamp
   private LocalDateTime createdAt;
 

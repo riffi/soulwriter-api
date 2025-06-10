@@ -15,4 +15,6 @@ public class SaveBookRequest {
 
   @NotBlank(message = "Book data is required")
   private String bookData;
+
+  private String kind;
 }
