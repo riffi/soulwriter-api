@@ -27,8 +27,8 @@ public class BookService {
     book.setUser(user);
     book.setBookData(request.getBookData());
     book.setKind(request.getKind());
-    book.setCreatedAt(java.time.LocalDateTime.now());
-    book.setUpdatedAt(java.time.LocalDateTime.now());
+    book.setCreatedAt(java.time.OffsetDateTime.now());
+    book.setUpdatedAt(java.time.OffsetDateTime.now());
 
     userBookRepository.save(book);
 

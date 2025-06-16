@@ -5,6 +5,7 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Data
 @Entity
@@ -27,8 +28,8 @@ public class UserBook {
   private String kind;
 
   @CreationTimestamp
-  private LocalDateTime createdAt;
+  private OffsetDateTime createdAt;
 
   @UpdateTimestamp
-  private LocalDateTime updatedAt;
+  private OffsetDateTime  updatedAt;
 }
